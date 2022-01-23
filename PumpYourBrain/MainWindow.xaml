@@ -1,0 +1,87 @@
+﻿<Window x:Class="PumpYourBrain.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:PumpYourBrain.MVVM.ViewModel"
+        xmlns:local="clr-namespace:PumpYourBrain"
+        mc:Ignorable="d"
+        Height="720" Width="1280"
+        WindowStyle="None"
+        ResizeMode="NoResize" 
+        Background="Transparent" 
+        AllowsTransparency="True" >
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
+    <Border Background ="#41729F"
+            CornerRadius="20">
+        <StackPanel Orientation="Horizontal">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="280"/>
+                </Grid.ColumnDefinitions>
+            
+                <TextBlock Text="PumpYourBrain"
+                       VerticalAlignment="Center"
+                       Foreground="White" 
+                       FontSize="37" Height="50"
+                           Margin="20,0,0,0"
+                           FontFamily="/Fonts/#Anton"/>
+            
+                <StackPanel Grid.Row="1">
+                
+                    <RadioButton Content="Home"
+                                 Height="50"
+                                 FontSize="24"
+                                 Margin="0, 0, 0, 36"
+                                 Style="{StaticResource MenuButtonTheme}" IsChecked="True"
+                                 Command="{Binding HomeViewCommand}"/>
+                    <RadioButton Content="Exercises"
+                                 Height="50"
+                                 FontSize="24"
+                                 Margin="0, 0, 0, 36"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 Command="{Binding ExersicesViewCommand}"/>
+                    <RadioButton Content="LeaderBoard"
+                                 Height="50"
+                                 FontSize="24"
+                                 Margin="0, 0, 0, 36"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 Command="{Binding LeaderBoardViewCommand}"/>
+                    <RadioButton Content="About"
+                                 Height="50"
+                                 FontSize="24"
+                                 Margin="0, 0, 0, 36"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 Command="{Binding SettingsViewCommand}"/>
+                    <RadioButton Content="Exit"
+                                 Height="50"
+                                 FontSize="24"
+                                 Margin="0, 0, 0, 36"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 Command="{Binding ExitViewCommand}"
+                                 />
+
+
+
+                </StackPanel>
+            
+            </Grid>
+            <Border Background="#274472"
+                    Width="1000"
+                    CornerRadius="20">
+                <ContentControl Margin="30"
+                                Content="{Binding CurrentView}"/>
+
+            </Border>
+        </StackPanel>
+
+
+    </Border>
+</Window>
