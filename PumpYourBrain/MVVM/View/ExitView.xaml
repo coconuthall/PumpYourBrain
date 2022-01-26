@@ -10,7 +10,19 @@
         <TextBlock Text="Are you sure you want to exit?"
                    FontSize="48"
                    Foreground="#C3E0E5"
-                   FontFamily="/Fonts/#Anton"/>
+                   FontFamily="/Fonts/#Anton"
+                   Margin="0, 0, 0, 50"/>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Click="Button_Click"
+                Style="{StaticResource ExitButtonStyle}"
+                    Margin="0, 0, 30, 0">
+                Yes
+            </Button>
+            <Button Command="{Binding DataContext.HomeViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                    Style="{StaticResource ExitButtonStyle}">No</Button>
+        </StackPanel>
         
+
     </StackPanel>
 </UserControl>

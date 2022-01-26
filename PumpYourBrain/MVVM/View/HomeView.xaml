@@ -17,9 +17,11 @@
                    Margin="0, 0, 0, 20"
                    FontFamily="/Fonts/#Anton"/>
         <StackPanel Orientation="Horizontal">
-            <Button Style="{StaticResource LargeButtonStyle}"/>
+            <Button Style="{StaticResource LargeButtonStyle}"
+                    Command="{Binding DataContext.CountGameViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"/>
             <Button Style="{StaticResource LargeButtonStyle}"/>
             
+
         </StackPanel>
         <TextBlock Text="Articles"
                    Foreground="#C3E0E5"
