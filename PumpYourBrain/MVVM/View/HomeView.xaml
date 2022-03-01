@@ -9,7 +9,7 @@
              d:DesignHeight="600" d:DesignWidth="1000">
 
     <StackPanel>
-        <TextBlock Text="Popular"
+        <TextBlock Text="Quiz Games"
                    Foreground="#C3E0E5"
                    FontSize="48"
                    HorizontalAlignment="Left"
@@ -18,8 +18,11 @@
                    FontFamily="/Fonts/#Anton"/>
         <StackPanel Orientation="Horizontal">
             <Button Style="{StaticResource LargeButtonStyle}"
-                    Command="{Binding DataContext.CountGameViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"/>
-            <Button Style="{StaticResource LargeButtonStyle}"/>
+                    Command="{Binding DataContext.QuizGame1ViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                    Cursor="Hand"/>
+            <Button Style="{StaticResource LargeButtonStyle}"
+                    Command="{Binding DataContext.QuizGame2ViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                    Cursor="Hand"/>
             
 
         </StackPanel>
@@ -29,62 +32,36 @@
                    FontFamily="/Fonts/#Anton"
                    Margin="0, 0, 0, 20"/>
         <StackPanel Orientation="Horizontal">
-            <Grid>
-                <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                    <Border.Clip>
-                        <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                    </Border.Clip>
-                </Border>
+            <StackPanel Margin="0, 0, 20, 0">
+                <Button Style="{StaticResource ButtonStyle}"
+                    Cursor="Hand"
+                    
+                    Command="{Binding DataContext.CountArticleViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}">
+                   
 
-            </Grid>
-            <Grid>
-                <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                    <Border.Clip>
-                        <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                    </Border.Clip>
-                </Border>
-
-            </Grid>
-            <Grid>
-                <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                    <Border.Clip>
-                        <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                    </Border.Clip>
-                </Border>
-
-            </Grid>
-            <Grid>
-                <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                    <Border.Clip>
-                        <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                    </Border.Clip>
-                </Border>
-
-            </Grid>
+                </Button>
+                <TextBlock 
+                   Foreground="#C3E0E5"
+                   FontSize="20"
+                   FontFamily="/Fonts/#Anton"
+                   HorizontalAlignment="Center">
+                    Verbal Counting
+                </TextBlock>
+            </StackPanel>
+            <StackPanel>
+                <Button Style="{StaticResource ButtonStyle}"
+                        Command="{Binding DataContext.FindArticleViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                    Cursor="Hand">
+                    
+                </Button>
+                <TextBlock 
+                   Foreground="#C3E0E5"
+                   FontSize="20"
+                   FontFamily="/Fonts/#Anton"
+                   HorizontalAlignment="Center">
+                    Find the Number
+                </TextBlock>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
 </UserControl>

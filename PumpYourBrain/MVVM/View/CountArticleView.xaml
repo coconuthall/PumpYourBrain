@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="PumpYourBrain.MVVM.View.CountArticleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PumpYourBrain.MVVM.View"
+             mc:Ignorable="d" 
+             Background="Transparent"
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <StackPanel>
+        <TextBlock Text="Verbal Counting"
+                   Foreground="#C3E0E5"
+                   FontSize="48"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="0, 0, 0, 20"
+                   FontFamily="/Fonts/#Anton"/>
+        <TextBlock Foreground="#C3E0E5"
+                   FontSize="24"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="0, 0, 0, 20"
+                   FontFamily="/Fonts/#Anton">
+            With the development of computer technology, the desire of people to perform<LineBreak/>
+            operations on numbers in the mind is reduced to a minimum. We prefer using <LineBreak/>
+            computers to count even the simpliest tasks. But being able to solve math tasks <LineBreak/>
+            is not only a useful skill, but it also can develop your overall brain performance.<LineBreak/>
+            <LineBreak/>
+            <LineBreak/>
+            We can help you with this problem with our count mini-game where you can train <LineBreak/>
+            your verbal counting by solving math tasks. You will be shown a basic math operation <LineBreak/>
+            which you should solve as quick as posible to train your verbal counting.
+        </TextBlock>
+    </StackPanel>
+</UserControl>

@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace PumpYourBrain.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for SettingsView.xaml
+    /// Interaction logic for QuizGame2View.xaml
     /// </summary>
-    public partial class SettingsView : UserControl
+    public partial class QuizGame2View : UserControl
     {
-        public SettingsView()
+        public QuizGame2View()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://pumpyourbrain.nethouse.ru/");
         }
     }
 }

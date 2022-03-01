@@ -9,12 +9,20 @@ namespace PumpYourBrain.MVVM.ViewModel
 {
     internal class MainViewModel : ObservableObject
     {
+        public RelayCommand QuizGame1ViewCommand { get; set; }
+        public RelayCommand QuizGame2ViewCommand { get; set; }
+        public RelayCommand FindArticleViewCommand { get; set; }
+        public RelayCommand CountArticleViewCommand { get; set; }
         public RelayCommand CountGameViewCommand { get; set; }
         public RelayCommand SettingsViewCommand { get; set; }
         public RelayCommand ExitViewCommand { get; set; }
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand ExersicesViewCommand { get; set; }
         public RelayCommand LeaderBoardViewCommand { get; set; }
+        public QuizGame1ViewModel QuizGame1VM { get; set;}
+        public QuizGame2ViewModel QuizGame2VM { get; set;}
+        public FindArticleViewModel FindArticleVM { get; set; }
+        public CountArticleViewModel CountArticleVM { get; set; }
         public HomeViewModel HomeVM { get; set; }
         public ExitViewModel ExitVM { get; set; }
         public ExersicesViewModel ExersicesVM { get; set; }
@@ -32,6 +40,10 @@ namespace PumpYourBrain.MVVM.ViewModel
         }
         public MainViewModel()
         {
+            QuizGame1VM = new QuizGame1ViewModel();
+            QuizGame2VM = new QuizGame2ViewModel();
+            FindArticleVM = new FindArticleViewModel();
+            CountArticleVM = new CountArticleViewModel();
             HomeVM = new HomeViewModel();
             CurrentView = HomeVM;
             ExersicesVM= new ExersicesViewModel();
@@ -56,6 +68,18 @@ namespace PumpYourBrain.MVVM.ViewModel
             });
             CountGameViewCommand = new RelayCommand(o => {
                 CurrentView = CountGameVM;
+            });
+            CountArticleViewCommand = new RelayCommand(o => {
+                CurrentView = CountArticleVM;
+            });
+            FindArticleViewCommand = new RelayCommand(o => {
+                CurrentView = FindArticleVM;
+            });
+            QuizGame1ViewCommand = new RelayCommand(o => {
+                CurrentView = QuizGame1VM;
+            });
+            QuizGame2ViewCommand = new RelayCommand(o => {
+                CurrentView = QuizGame2VM;
             });
         }
     }

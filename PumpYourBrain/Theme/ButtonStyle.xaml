@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style BasedOn="{StaticResource {x:Type Button}}"
+           TargetType="{x:Type Button}"
+           x:Key="ButtonStyle">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border Width="140" 
+                                    Height="140"
+                                    Background="#5885AF"
+                                    >
+                                <Border.Clip>
+                                    <RectangleGeometry
+                                        RadiusX="15"
+                                        RadiusY="15"
+                                        Rect="0, 0, 140, 140"/>
+                                    
+                                </Border.Clip>
+                                <StackPanel>
+                                    <Image Source="{TemplateBinding Property=Content}"/>
+                                </StackPanel>
+                                
+                            </Border>
+
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+        </Style.Setters>
+    </Style>
+</ResourceDictionary>

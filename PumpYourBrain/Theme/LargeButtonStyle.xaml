@@ -20,13 +20,13 @@
                             <Grid>
                                 <StackPanel>
                                     <TextBlock
-                            Text="Example"
+                            Text="Quiz game"
                             Foreground="White"
                             Margin="10, 0, 0, 10"
                             FontFamily="/Fonts/#Anton"
                             FontSize="30"/>
                                     <TextBlock
-                            Text="A Simple Example exersice that we didn't&#x0a;come up with yet"
+                            Text="Test your erudition"
                             Foreground="White"
                             FontFamily="/Fonts/#Anton"
                             

@@ -5,12 +5,38 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PumpYourBrain.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="600" d:DesignWidth="1000">
+    
     <StackPanel>
         <TextBlock
             Text="About the app"
             FontSize="48"
             Foreground="#C3E0E5"
-            FontFamily="/Fonts/#Anton"/>
+            FontFamily="/Fonts/#Anton"
+            Margin="0, 0, 0, 20"/>
+        <StackPanel>
+            <TextBlock
+            FontSize="24"
+            Foreground="#C3E0E5"
+            FontFamily="/Fonts/#Anton">
+                PumpYourBrain app was designed to<LineBreak/>
+                train logic and attention by solving<LineBreak/>
+                puzzles, simple math tasks and quizes.<LineBreak/>
+                <LineBreak/>
+            </TextBlock>
+            <TextBlock
+                
+            FontSize="24"
+            Foreground="#C3E0E5"
+            FontFamily="/Fonts/#Anton">
+                This app was developed by PumpYourBrain team.<LineBreak/>
+                Check out our website for more information:<LineBreak/>
+
+            </TextBlock>
+            <Button Click="Button_Click"
+                    Style="{StaticResource WebsiteButtonStyle}"
+                    HorizontalAlignment="Left" Cursor="Hand">Click here to open our website</Button>
+
+        </StackPanel>
     </StackPanel>
 </UserControl>

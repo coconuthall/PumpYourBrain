@@ -7,154 +7,33 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1000">
     <StackPanel>
-        <TextBlock Text="How To Play"
-                   FontSize="37"
-                   FontFamily="/Fonts/#Anton"
-                   Foreground="#C3E0E5"
-                   Margin="0, 0, 0, 20"
-                   />
-        <StackPanel Orientation="Horizontal">
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            
-        </StackPanel>
         <TextBlock
             Text="Training Mode"
             FontSize="37"
             Foreground="#C3E0E5"
             FontFamily="/Fonts/#Anton"
-            Margin="0, 50, 0, 20"/>
+            Margin="0, 0, 0, 20"/>
         <StackPanel Orientation="Horizontal">
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
-            <Border Width="140"
-                    Height="140"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
-                <Border.Clip>
-                    <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 140, 140"/>
-                </Border.Clip>
-            </Border>
+            <Button Style="{StaticResource ButtonStyle}"
+                    Command="{Binding DataContext.CountGameViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                    Cursor="Hand"
+                    Margin="0, 0, 20, 0">
+
+            </Button>
+            <Button Style="{StaticResource ButtonStyle}"
+                    Cursor="Hand"
+                    Margin="0, 0, 20, 0">
+
+            </Button>
+            <Button Style="{StaticResource ButtonStyle}"
+                    Cursor="Hand"
+                    Margin="0, 0, 20, 0">
+
+            </Button>
+            <Button Style="{StaticResource ButtonStyle}"
+                    Cursor="Hand">
+
+            </Button>
         </StackPanel>
     </StackPanel>
 </UserControl>

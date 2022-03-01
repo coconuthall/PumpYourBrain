@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="PumpYourBrain.MVVM.View.FindArticleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PumpYourBrain.MVVM.View"
+             mc:Ignorable="d" 
+             Background="Transparent"
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <StackPanel>
+        <TextBlock Text="Find the Number"
+                   Foreground="#C3E0E5"
+                   FontSize="48"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="0, 0, 0, 20"
+                   FontFamily="/Fonts/#Anton"/>
+        <TextBlock Foreground="#C3E0E5"
+                   FontSize="24"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="0, 0, 0, 20"
+                   FontFamily="/Fonts/#Anton">
+            The “find the number” game favorably affects the concentration of attention,<LineBreak/>
+            which helps to highlight the desired figure from the background and hold this object. <LineBreak/>
+            In turn, this shows focusing on different activities, achieving goals and getting things done.<LineBreak/>
+            With the help of the game, you will learn to train: arbitrary attention<LineBreak/>
+            <LineBreak/>
+            <LineBreak/>
+        </TextBlock>
+    </StackPanel>
+</UserControl>

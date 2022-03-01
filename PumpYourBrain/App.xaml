@@ -12,6 +12,8 @@
                 <ResourceDictionary Source="Theme/MenubuttonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/LargeButtonStyle.xaml"/>
                 <ResourceDictionary Source="Theme/ExitButtonStyle.xaml"/>
+                <ResourceDictionary Source="Theme/ButtonStyle.xaml"/>
+                <ResourceDictionary Source="Theme/WebsiteButtonStyle.Xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
@@ -30,6 +32,18 @@
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewModel:CountGameViewModel}">
                 <view:CountGameView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:CountArticleViewModel}">
+                <view:CountArticleView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:FindArticleViewModel}">
+                <view:FindArticleView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:QuizGame1ViewModel}">
+                <view:QuizGame1View/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:QuizGame2ViewModel}">
+                <view:QuizGame2View/>
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>

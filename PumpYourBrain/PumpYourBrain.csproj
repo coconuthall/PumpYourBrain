@@ -69,6 +69,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\CountArticleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\CountGameView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -81,6 +85,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\FindArticleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\HomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -89,7 +97,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\QuizGame1View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\QuizGame2View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\ButtonStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,15 +125,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Theme\WebsiteButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MVVM\ViewModel\CountArticleViewModel.cs" />
     <Compile Include="MVVM\ViewModel\CountGameViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ExersicesViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ExitViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\FindArticleViewModel.cs" />
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LeaderBoardViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\QuizGame1ViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\QuizGame2ViewModel.cs" />
     <Compile Include="MVVM\ViewModel\SettingsViewModel.cs" />
+    <Compile Include="MVVM\View\CountArticleView.xaml.cs">
+      <DependentUpon>CountArticleView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\CountGameView.xaml.cs">
       <DependentUpon>CountGameView.xaml</DependentUpon>
     </Compile>
@@ -123,11 +154,20 @@
     <Compile Include="MVVM\View\ExitView.xaml.cs">
       <DependentUpon>ExitView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\View\FindArticleView.xaml.cs">
+      <DependentUpon>FindArticleView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\LeaderBoardView.xaml.cs">
       <DependentUpon>LeaderBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\QuizGame1View.xaml.cs">
+      <DependentUpon>QuizGame1View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\QuizGame2View.xaml.cs">
+      <DependentUpon>QuizGame2View.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>

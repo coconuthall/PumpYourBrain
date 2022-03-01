@@ -41,34 +41,26 @@
                                  FontSize="24"
                                  Margin="0, 0, 0, 36"
                                  Style="{StaticResource MenuButtonTheme}" IsChecked="True"
-                                 Command="{Binding HomeViewCommand}"/>
+                                 Command="{Binding HomeViewCommand}" Cursor="Hand"/>
                     <RadioButton Content="Exercises"
                                  Height="50"
                                  FontSize="24"
                                  Margin="0, 0, 0, 36"
                                  Style="{StaticResource MenuButtonTheme}"
-                                 Command="{Binding ExersicesViewCommand}"/>
-                    <RadioButton Content="LeaderBoard"
-                                 Height="50"
-                                 FontSize="24"
-                                 Margin="0, 0, 0, 36"
-                                 Style="{StaticResource MenuButtonTheme}"
-                                 Command="{Binding LeaderBoardViewCommand}"/>
+                                 Command="{Binding ExersicesViewCommand}" Cursor="Hand"/>
                     <RadioButton Content="About"
                                  Height="50"
                                  FontSize="24"
                                  Margin="0, 0, 0, 36"
                                  Style="{StaticResource MenuButtonTheme}"
-                                 Command="{Binding SettingsViewCommand}"/>
+                                 Command="{Binding SettingsViewCommand}" Cursor="Hand"/>
                     <RadioButton Content="Exit"
                                  Height="50"
                                  FontSize="24"
                                  Margin="0, 0, 0, 36"
                                  Style="{StaticResource MenuButtonTheme}"
-                                 Command="{Binding ExitViewCommand}"
+                                 Command="{Binding ExitViewCommand}" Cursor="Hand"
                                  />
-
-
 
                 </StackPanel>
             
