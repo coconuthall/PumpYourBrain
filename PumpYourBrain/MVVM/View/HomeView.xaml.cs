@@ -24,5 +24,10 @@ namespace PumpYourBrain.MVVM.View
         {
             InitializeComponent();
         }
+
+        private void QuizDialog(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Answer all of the questions to get good score");
+        }
     }
 }

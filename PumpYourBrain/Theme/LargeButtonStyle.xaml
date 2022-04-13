@@ -8,35 +8,30 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border Width="300"
-                    Height="200"
-                    Background="#5885AF"
-                    Margin="0, 0, 20, 20">
+                                Height="200"
+                                Background="#5885AF"
+                                Margin="0, 0, 20, 20">
                             <Border.Clip>
-                                <RectangleGeometry
-                        RadiusX="15"
-                        RadiusY="15"
-                        Rect="0, 0, 300, 200"/>
+                                <RectangleGeometry RadiusX="15"
+                                                   RadiusY="15"
+                                                   Rect="0, 0, 300, 200"/>
                             </Border.Clip>
                             <Grid>
                                 <StackPanel>
-                                    <TextBlock
-                            Text="Quiz game"
-                            Foreground="White"
-                            Margin="10, 0, 0, 10"
-                            FontFamily="/Fonts/#Anton"
-                            FontSize="30"/>
-                                    <TextBlock
-                            Text="Test your erudition"
-                            Foreground="White"
-                            FontFamily="/Fonts/#Anton"
-                            
-                            Margin="10, 0, 0, 10"
-                            FontSize="15"/>
+                                    <TextBlock Text="{TemplateBinding Property=Content}"
+                                                Foreground="White"
+                                                Margin="10, 0, 0, 10"
+                                                FontFamily="/Fonts/#Anton"
+                                                FontSize="30"/>
+                                    <TextBlock Text="Test your erudition"
+                                               Foreground="White"
+                                               FontFamily="/Fonts/#Anton"
+                                               Margin="10, 0, 0, 10"
+                                               FontSize="15"/>
                                 </StackPanel>
-                                <Image
-                        Width="150"
-                        Height="150"
-                        Source="/Images/face.png" Margin="165,83,-15,-33"/>
+                                <Image Width="150"
+                                       Height="150"
+                                       Source="/Images/face.png" Margin="165,83,-15,-33"/>
                             </Grid>
 
                         </Border>

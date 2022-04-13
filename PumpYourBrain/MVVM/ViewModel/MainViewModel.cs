@@ -1,14 +1,17 @@
 ﻿using PumpYourBrain.Core;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace PumpYourBrain.MVVM.ViewModel
 {
     internal class MainViewModel : ObservableObject
     {
+        public RelayCommand FindTheNumberViewCommand { get; set; }
         public RelayCommand QuizGame1ViewCommand { get; set; }
         public RelayCommand QuizGame2ViewCommand { get; set; }
         public RelayCommand FindArticleViewCommand { get; set; }
@@ -19,8 +22,9 @@ namespace PumpYourBrain.MVVM.ViewModel
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand ExersicesViewCommand { get; set; }
         public RelayCommand LeaderBoardViewCommand { get; set; }
+        public FindTheNumberViewModel FindTheNumberVM { get; set; }
         public QuizGame1ViewModel QuizGame1VM { get; set;}
-        public QuizGame2ViewModel QuizGame2VM { get; set;}
+        public QuizGame2ViewModel QuizGame2VM { get; set; }
         public FindArticleViewModel FindArticleVM { get; set; }
         public CountArticleViewModel CountArticleVM { get; set; }
         public HomeViewModel HomeVM { get; set; }
@@ -40,8 +44,8 @@ namespace PumpYourBrain.MVVM.ViewModel
         }
         public MainViewModel()
         {
-            QuizGame1VM = new QuizGame1ViewModel();
             QuizGame2VM = new QuizGame2ViewModel();
+            QuizGame1VM = new QuizGame1ViewModel();
             FindArticleVM = new FindArticleViewModel();
             CountArticleVM = new CountArticleViewModel();
             HomeVM = new HomeViewModel();
@@ -51,6 +55,7 @@ namespace PumpYourBrain.MVVM.ViewModel
             SettingsVM = new SettingsViewModel();
             ExitVM = new ExitViewModel();
             CountGameVM = new CountGameViewModel();
+            FindTheNumberVM = new FindTheNumberViewModel();
             HomeViewCommand = new RelayCommand(o => { 
                 CurrentView = HomeVM;
             });
@@ -80,6 +85,9 @@ namespace PumpYourBrain.MVVM.ViewModel
             });
             QuizGame2ViewCommand = new RelayCommand(o => {
                 CurrentView = QuizGame2VM;
+            });
+            FindTheNumberViewCommand = new RelayCommand(o => {
+                CurrentView = FindTheNumberVM;
             });
         }
     }

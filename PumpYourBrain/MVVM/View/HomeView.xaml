@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:PumpYourBrain.MVVM.View"
              xmlns:viewModel="clr-namespace:PumpYourBrain.MVVM.ViewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1000">
+             d:DesignHeight="600" d:DesignWidth="1000"
+             DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}">
 
     <StackPanel>
         <TextBlock Text="Quiz Games"
@@ -18,11 +19,15 @@
                    FontFamily="/Fonts/#Anton"/>
         <StackPanel Orientation="Horizontal">
             <Button Style="{StaticResource LargeButtonStyle}"
-                    Command="{Binding DataContext.QuizGame1ViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
-                    Cursor="Hand"/>
+                    Command="{Binding DataContext.QuizGame1ViewCommand}"
+                    Content="Quiz Game #1"
+                    Cursor="Hand"
+                    Click="QuizDialog"/>
             <Button Style="{StaticResource LargeButtonStyle}"
-                    Command="{Binding DataContext.QuizGame2ViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
-                    Cursor="Hand"/>
+                    Command="{Binding DataContext.QuizGame2ViewCommand}"
+                    Click="QuizDialog"
+                    Cursor="Hand"
+                    Content="Quiz Game #2"/>
             
 
         </StackPanel>
@@ -36,21 +41,20 @@
                 <Button Style="{StaticResource ButtonStyle}"
                     Cursor="Hand"
                     
-                    Command="{Binding DataContext.CountArticleViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}">
+                    Command="{Binding DataContext.CountArticleViewCommand}">
                    
 
                 </Button>
-                <TextBlock 
-                   Foreground="#C3E0E5"
-                   FontSize="20"
-                   FontFamily="/Fonts/#Anton"
-                   HorizontalAlignment="Center">
+                <TextBlock Foreground="#C3E0E5"
+                           FontSize="20"
+                           FontFamily="/Fonts/#Anton"
+                           HorizontalAlignment="Center">
                     Verbal Counting
                 </TextBlock>
             </StackPanel>
             <StackPanel>
                 <Button Style="{StaticResource ButtonStyle}"
-                        Command="{Binding DataContext.FindArticleViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                        Command="{Binding DataContext.FindArticleViewCommand}"
                     Cursor="Hand">
                     
                 </Button>

@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PumpYourBrain.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="720" d:DesignWidth="1000">
+             d:DesignHeight="720" d:DesignWidth="1000"
+             DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}">
     <StackPanel>
         <TextBlock
             Text="Training Mode"
@@ -14,26 +15,35 @@
             FontFamily="/Fonts/#Anton"
             Margin="0, 0, 0, 20"/>
         <StackPanel Orientation="Horizontal">
-            <Button Style="{StaticResource ButtonStyle}"
-                    Command="{Binding DataContext.CountGameViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+            <StackPanel Margin="0, 0, 20, 0">
+                <Button Style="{StaticResource ButtonStyle}"
                     Cursor="Hand"
-                    Margin="0, 0, 20, 0">
+                    
+                    Command="{Binding DataContext.CountGameViewCommand}">
 
-            </Button>
-            <Button Style="{StaticResource ButtonStyle}"
-                    Cursor="Hand"
-                    Margin="0, 0, 20, 0">
 
-            </Button>
-            <Button Style="{StaticResource ButtonStyle}"
-                    Cursor="Hand"
-                    Margin="0, 0, 20, 0">
-
-            </Button>
-            <Button Style="{StaticResource ButtonStyle}"
+                </Button>
+                <TextBlock Foreground="#C3E0E5"
+                           FontSize="20"
+                           FontFamily="/Fonts/#Anton"
+                           HorizontalAlignment="Center">
+                    Verbal Counting
+                </TextBlock>
+            </StackPanel>
+            <StackPanel>
+                <Button Style="{StaticResource ButtonStyle}"
+                        Command="{Binding DataContext.FindTheNumberViewCommand}"
                     Cursor="Hand">
 
-            </Button>
+                </Button>
+                <TextBlock 
+                   Foreground="#C3E0E5"
+                   FontSize="20"
+                   FontFamily="/Fonts/#Anton"
+                   HorizontalAlignment="Center">
+                    Find the Number
+                </TextBlock>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
 </UserControl>

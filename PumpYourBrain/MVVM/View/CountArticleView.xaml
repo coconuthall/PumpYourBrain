@@ -29,7 +29,8 @@
             <LineBreak/>
             We can help you with this problem with our count mini-game where you can train <LineBreak/>
             your verbal counting by solving math tasks. You will be shown a basic math operation <LineBreak/>
-            which you should solve as quick as posible to train your verbal counting.
+            which you should solve as quick as posible to train your verbal counting. Your score is <LineBreak/>
+            based on number of correct answers and time.
         </TextBlock>
     </StackPanel>
 </UserControl>

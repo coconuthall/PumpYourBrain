@@ -65,13 +65,47 @@
                 </StackPanel>
             
             </Grid>
-            <Border Background="#274472"
-                    Width="1000"
-                    CornerRadius="20">
-                <ContentControl Margin="30"
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Border Background="#274472"
+                            Height="50"
+                            Width="900"
+                            MouseDown="WindowMove"/>
+                    <Border Width="50"
+                            Background="#274472"
+                            Cursor="Hand"
+                            MouseLeftButtonDown="Minimize">
+                        <TextBlock Text="_"
+                                   Foreground="White"
+                                   FontSize="35"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   />
+                    </Border>
+                    <Border Width="50"
+                            CornerRadius="0, 20, 0, 0"
+                            Background="#e86666"
+                            Cursor="Hand"
+                            MouseLeftButtonDown="AppClose">
+                        <TextBlock Text="X"
+                                   Foreground="White"
+                                   FontSize="35"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"/>
+                    </Border>
+
+                </StackPanel>
+                
+                <Border Background="#274472"
+                        Width="1000"
+                        Height="670"
+                        CornerRadius="0,0,20,0">
+                    <ContentControl Margin="30"
                                 Content="{Binding CurrentView}"/>
 
-            </Border>
+                </Border>
+            </StackPanel>
+            
         </StackPanel>
 
 

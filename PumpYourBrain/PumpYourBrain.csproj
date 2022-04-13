@@ -89,6 +89,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\FindTheNumberView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\HomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -136,6 +140,7 @@
     <Compile Include="MVVM\ViewModel\ExersicesViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ExitViewModel.cs" />
     <Compile Include="MVVM\ViewModel\FindArticleViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\FindTheNumberViewModel.cs" />
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LeaderBoardViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
@@ -156,6 +161,9 @@
     </Compile>
     <Compile Include="MVVM\View\FindArticleView.xaml.cs">
       <DependentUpon>FindArticleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\FindTheNumberView.xaml.cs">
+      <DependentUpon>FindTheNumberView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
@@ -198,9 +206,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MVVM\Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\face.png" />
   </ItemGroup>

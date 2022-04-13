@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PumpYourBrain.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,12 +24,13 @@ namespace PumpYourBrain.MVVM.View
         public QuizGame1View()
         {
             InitializeComponent();
+            StartGame();
+            NextQuestion();
         }
-        // create a new list of integers called question numbers
-        // this interger will hold how many questions we have for this quiz and we will shuffle this inside the start game function
+        
         List<int> questionNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-        // create 3 more integers called qNum that will control which question shows on the screen, i and score
+        
         int qNum = 0;
         int i;
         int score;
@@ -65,7 +67,7 @@ namespace PumpYourBrain.MVVM.View
 
         }
 
-        private void RestartGame()
+        public void RestartGame()
         {
             // restart game function will load all of the default values for this game
             score = 0; // set score to 0
@@ -83,10 +85,11 @@ namespace PumpYourBrain.MVVM.View
             if (qNum < questionNumbers.Count)
             {
                 i = questionNumbers[qNum];
+                
             }
             else
             {
-                // if we have done below the number of questions we have available then we will restart the game
+                MessageBox.Show($"You completed the quiz! Your score: {score}/10");
                 RestartGame();
             }
 
@@ -258,7 +261,7 @@ namespace PumpYourBrain.MVVM.View
             }
         }
 
-        private void StartGame()
+        public void StartGame()
         {
             // this is the start game function
             // inside of this function we will randomise the questions list and save it back into the list 
@@ -270,14 +273,8 @@ namespace PumpYourBrain.MVVM.View
             questionNumbers = randomList;
 
             // empty the question order label on the canvas
-            questionOrder.Content = null;
-
-            // run a for loop to add the value which will display the randomised list to the display so we can see how the list has been ramdomised
-            for (int i = 0; i < questionNumbers.Count; i++)
-            {
-                questionOrder.Content += " " + questionNumbers[i].ToString();
-            }
-
+            
+            
         }
     }
 }

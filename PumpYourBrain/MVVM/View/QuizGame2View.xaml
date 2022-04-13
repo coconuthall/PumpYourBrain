@@ -6,13 +6,18 @@
              xmlns:local="clr-namespace:PumpYourBrain.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
-        <TextBlock Text="QuizGame2"
-                   Foreground="#C3E0E5"
-                   FontSize="48"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"
-                   Margin="0, 0, 0, 20"
-                   FontFamily="/Fonts/#Anton"/>
-    </StackPanel>
+    <Canvas Name="myCanvas" Background="Transparent">
+
+        <Label FontFamily="/Fonts/#Anton" Name="scoreText" FontSize="18" Foreground="#C3E0E5">Score: 0/10</Label>
+        <TextBlock FontFamily="/Fonts/#Anton" Name="txtQuestion" Foreground="#C3E0E5" TextAlignment="Center" Padding="3" FontSize="20" Width="572" TextWrapping="Wrap" Canvas.Left="104" Canvas.Top="66">
+
+        </TextBlock>
+
+        <Button Background="#5885AF" FontSize="18" Click="checkAnswer" Name="ans1" Width="200" Height="50" Content="" Tag="0" Canvas.Left="104" Canvas.Top="200" />
+        <Button Background="#5885AF" FontSize="18" Click="checkAnswer" Name="ans2" Width="200" Height="50" Content="" Tag="0" Canvas.Left="104" Canvas.Top="321" />
+        <Button Background="#5885AF" FontSize="18" Click="checkAnswer" Name="ans3" Width="200" Height="50" Content="" Tag="0" Canvas.Left="476" Canvas.Top="200" />
+        <Button Background="#5885AF" FontSize="18" Click="checkAnswer" Name="ans4" Width="200" Height="50" Content="" Tag="0" Canvas.Left="476" Canvas.Top="321" />
+
+
+    </Canvas>
 </UserControl>

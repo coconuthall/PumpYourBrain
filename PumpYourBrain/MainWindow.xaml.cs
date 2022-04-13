@@ -20,15 +20,35 @@ namespace PumpYourBrain
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow window;
         public MainWindow()
         {
             InitializeComponent();
+            window = this;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 
         }
-        
+
+        private void WindowMove(object sender, MouseButtonEventArgs e)
+        {
+            if(Mouse.LeftButton == MouseButtonState.Pressed)
+            {
+                MainWindow.window.DragMove();
+            }
+            
+        }
+
+        private void AppClose(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void Minimize(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow.window.WindowState = WindowState.Minimized;
+        }
     }
 }

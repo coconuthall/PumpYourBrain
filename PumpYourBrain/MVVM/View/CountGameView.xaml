@@ -5,11 +5,192 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PumpYourBrain.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             d:DesignHeight="670" d:DesignWidth="1000"
+             Loaded="UserControl_Loaded">
+    <StackPanel>
         <TextBlock
-            Text="Hello"
+            Text="Solve this math problem"
+            FontFamily="/Fonts/#Anton"
             Foreground="White"
-            FontSize="37"/>
-    </Grid>
+            FontSize="37"
+            Margin="20, 0, 0, 0"/>
+        <Canvas Name="Canvas" Background="Transparent">
+            <TextBlock Text=""
+                       Foreground="#C3E0E5"
+                       FontSize="37"
+                       FontFamily="/Fonts/#Anton"
+                       Margin="0, 0, 0, 20" 
+                       Canvas.Left="20" 
+                       Canvas.Top="10"
+                       Name="Task">
+                123 + 13 =
+            </TextBlock>
+            
+            
+            
+            <TextBlock Text=""
+                       Foreground="#C3E0E5"
+                       FontSize="37"
+                       FontFamily="/Fonts/#Anton"
+                       Margin="0, 0, 0, 20" 
+                       Canvas.Left="320" 
+                       Canvas.Top="10"
+                       Name="CorrectAnswers">
+                Correct answers:
+            </TextBlock>
+            <TextBlock Text=""
+                       Foreground="#C3E0E5"
+                       FontSize="37"
+                       FontFamily="/Fonts/#Anton"
+                       Margin="0, 0, 0, 20" 
+                       Canvas.Left="320" 
+                       Canvas.Top="71"
+                       Name="WrongAnswers">
+                Wrong Answers:
+            </TextBlock>
+            <TextBlock Text=""
+                       Foreground="#C3E0E5"
+                       FontSize="37"
+                       FontFamily="/Fonts/#Anton"
+                       Margin="0, 0, 0, 20" 
+                       Canvas.Left="320" 
+                       Canvas.Top="135"
+                       Name="Time">
+                Time: 0:0
+            </TextBlock>
+            <TextBlock Text=""
+                       Foreground="#C3E0E5"
+                       FontSize="37"
+                       FontFamily="/Fonts/#Anton"
+                       Margin="0, 0, 0, 20" 
+                       Canvas.Left="320" 
+                       Canvas.Top="196"
+                       Name="BestScore">
+                Best score:
+            </TextBlock>
+            <TextBox Height="50"
+                     Width="200" 
+                     Background="White"
+                     FontSize="28"
+                     TextAlignment="Center"
+                     Canvas.Left="16" 
+                     Canvas.Top="110"
+                     Name="Answer"
+                     IsEnabled="False">
+
+            </TextBox>
+            
+            
+            
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="50" 
+                    Click="NumberEnter"
+                    Height="50" 
+                    Content="1" 
+                    Cursor="Hand"
+                    Canvas.Left="16" 
+                    Canvas.Top="190" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="50" 
+                    Height="50" 
+                    Content="2" 
+                    Click="NumberEnter"
+                    Cursor="Hand"
+                    Canvas.Left="91" 
+                    Canvas.Top="190" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="50" 
+                    Click="NumberEnter"
+                    Height="50" 
+                    Cursor="Hand"
+                    Content="3" 
+                    Canvas.Left="166" 
+                    Canvas.Top="190" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="50" 
+                    Height="50" 
+                    Content="4" 
+                    Click="NumberEnter"
+                    Cursor="Hand"
+                    Canvas.Left="16" 
+                    Canvas.Top="267" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="50" 
+                    Cursor="Hand"
+                    Click="NumberEnter"
+                    Height="50" 
+                    Content="5" 
+                    Canvas.Left="91" 
+                    Canvas.Top="267" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="50" 
+                    Height="50" 
+                    Click="NumberEnter"
+                    Content="6" 
+                    Cursor="Hand"
+                    Canvas.Left="166" 
+                    Canvas.Top="267" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="50" 
+                    Height="50" 
+                    Cursor="Hand"
+                    Click="NumberEnter"
+                    Content="7" 
+                    Canvas.Left="16" 
+                    Canvas.Top="346" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="50" 
+                    Height="50" 
+                    Click="NumberEnter"
+                    Cursor="Hand"
+                    Content="8" 
+                    Canvas.Left="91" 
+                    Canvas.Top="346" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="50" 
+                    Height="50" 
+                    Click="NumberEnter"
+                    Cursor="Hand"
+                    Content="9" 
+                    Canvas.Left="166" 
+                    Canvas.Top="346" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="50" 
+                    Cursor="Hand"
+                    Height="50" 
+                    Click="NumberEnter"
+                    Content="0" 
+                    Canvas.Left="16" 
+                    Canvas.Top="414" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="200" 
+                    Cursor="Hand"
+                    Height="50" 
+                    Content="Submit" 
+                    Click="CheckAnswer"
+                    Canvas.Left="16" 
+                    Canvas.Top="484" />
+            <Button Background="#5885AF" 
+                    FontSize="20" 
+                    Width="125" 
+                    Cursor="Hand"
+                    Height="50" 
+                    Content="Clear" 
+                    Click="Clear"
+                    Canvas.Left="91" 
+                    Canvas.Top="414" />
+        </Canvas>
+    </StackPanel>
+
 </UserControl>

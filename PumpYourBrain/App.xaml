@@ -45,6 +45,9 @@
             <DataTemplate DataType="{x:Type viewModel:QuizGame2ViewModel}">
                 <view:QuizGame2View/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:FindTheNumberViewModel}">
+                <view:FindTheNumberView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
     
