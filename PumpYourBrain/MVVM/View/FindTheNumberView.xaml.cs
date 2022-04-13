@@ -13,6 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace PumpYourBrain.MVVM.View
 {
@@ -27,8 +28,30 @@ namespace PumpYourBrain.MVVM.View
         }
         private List<int> numbers = new List<int>();
         private int answer;
+        DispatcherTimer dt = new DispatcherTimer();
+        public int increment = 0;
+        public int minutes = 0;
+        public int seconds = 0;
+        public int answers = 15;
+        private void dtTicker(object sender, EventArgs e)
+        {
+            increment++;
+            seconds = increment - minutes * 60;
+            if (seconds % 60 == 0)
+            {
+                minutes++;
+                seconds = 0;
+            }
+            Time.Text = $"Time: {minutes}:{seconds}";
+        }
         private void StartGame(object sender, RoutedEventArgs e)
         {
+            increment = 0;
+            minutes = 0;
+            seconds = 0;
+            dt.Interval = TimeSpan.FromSeconds(1);
+            dt.Tick += dtTicker;
+            dt.Start();
             Button SenderButton = sender as Button;
             SenderButton.Visibility = Visibility.Hidden;
             for(int i = 1; i <= 25; i++)
@@ -86,6 +109,11 @@ namespace PumpYourBrain.MVVM.View
             }
             answer = rnd.Next(1, 25);
             Task.Text = $"Find: {answer}";
+            UpdateScore();
+        }
+        private void UpdateScore()
+        {
+            Score.Text = $"Tasks Left: {answers}";
         }
         private void CheckAnswer(object sender, RoutedEventArgs e)
         {
@@ -93,11 +121,39 @@ namespace PumpYourBrain.MVVM.View
             Button senderButton = sender as Button;
             if(Int32.Parse(senderButton.Content.ToString()) == answer)
             {
-                Next();
+                answers--;
+                if (answers == 0)
+                {
+                    dt.Stop();
+                    UpdateScore();
+                    MessageBox.Show($"Your time: {minutes}:{seconds}");
+                    RestartGame();
+                }
+                else
+                {
+                    Next();
+                }
+
             }
             else
             {
                 senderButton.Background = new SolidColorBrush(Colors.Red);
+            }
+        }
+        private void RestartGame()
+        {
+            Start.Visibility = Visibility.Visible;
+            answers = 15;
+            Task.Text = "Click to start the game";
+            Time.Text = "Time:";
+            Score.Text = "Tasks Left:";
+            foreach (var x in Canvas.Children.OfType<Button>())
+            {
+                if(Int32.Parse(x.Tag.ToString()) <= 25)
+                {
+                    x.Visibility = Visibility.Collapsed;
+                }
+                
             }
         }
     }

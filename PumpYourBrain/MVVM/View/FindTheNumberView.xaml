@@ -38,9 +38,27 @@
             Canvas.Left="280" 
             Canvas.Top="70"
             Name="Task"/>
+        <TextBlock
+            Text="Time:"
+            FontFamily="/Fonts/#Anton"
+            Foreground="White"
+            FontSize="37"
+            TextAlignment="Center" 
+            Canvas.Left="747" 
+            Canvas.Top="70"
+            Name="Time"/>
+        <TextBlock
+            Text="Tasks Left:"
+            FontFamily="/Fonts/#Anton"
+            Foreground="White"
+            FontSize="37"
+            TextAlignment="Center" 
+            Canvas.Left="747" 
+            Canvas.Top="126"
+            Name="Score"/>
         <Button Background="#5885AF"
                 FontSize="18" 
-                Name="ans1" 
+                Name="Start" 
                 Content="Start"
                 Width="374" 
                 Tag="60"
